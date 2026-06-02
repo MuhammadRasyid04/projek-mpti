@@ -29,6 +29,7 @@ class HunianController extends Controller
     {
         $request->validate([
             'nama_hunian' => 'required|string',
+            'tipe_hunian' => 'required|string',
             'gambar_hunian' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
             'deskripsi_hunian' => 'nullable|string',
             'status_harian' => 'required|in:kosong,full',
@@ -45,6 +46,7 @@ class HunianController extends Controller
 
         $hunian = Hunian::create([
             'nama_hunian' => $request->nama_hunian,
+            'tipe_hunian' => $request->tipe_hunian,
             'gambar_hunian' => $gambar,
             'deskripsi_hunian' => $request->deskripsi_hunian,
             'status_harian' => $request->status_harian,
@@ -66,6 +68,7 @@ class HunianController extends Controller
 
         $request->validate([
             'nama_hunian' => 'required|string',
+            'tipe_hunian' => 'required|string',
             'gambar_hunian' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
             'deskripsi_hunian' => 'nullable|string',
             'status_harian' => 'required|in:kosong,full',
@@ -82,6 +85,7 @@ class HunianController extends Controller
 
         $hunian->update([
             'nama_hunian' => $request->nama_hunian,
+            'tipe_hunian' => $request->tipe_hunian,
             'gambar_hunian' => $gambar,
             'deskripsi_hunian' => $request->deskripsi_hunian,
             'status_harian' => $request->status_harian,

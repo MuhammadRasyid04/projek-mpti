@@ -11,6 +11,7 @@ class Hunian extends Model
 
     protected $fillable = [
         'nama_hunian',
+        'tipe_hunian',
         'gambar_hunian',
         'deskripsi_hunian',
         'status_harian',
